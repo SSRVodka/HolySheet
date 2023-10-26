@@ -15,7 +15,7 @@ MainWindow::MainWindow() {
     fDialog = nullptr;
 
     setWindowIcon(QIcon(":/imgs/icon.png"));
-    setCurrentFile("");     // 当前打开文件为空
+    setCurrentFile("");     // Empty file for now.
 }
 
 void MainWindow::createActions() {
@@ -93,7 +93,7 @@ void MainWindow::createActions() {
     selectAllAction = new QAction(tr("&All"), this);
     selectAllAction->setShortcut(QKeySequence::SelectAll);
     selectAllAction->setStatusTip(tr("Select all the cells in the holySheet"));
-    // QTableWidget::selectAll() 已提供，无需实现
+    // QTableWidget::selectAll()
     connect(selectAllAction, SIGNAL(triggered()), holySheet, SLOT(selectAll()));
 
     findAction = new QAction(tr("F&ind"), this);
@@ -121,18 +121,18 @@ void MainWindow::createActions() {
 
     showGridAction = new QAction(tr("&Show Grid"), this);
     showGridAction->setCheckable(true);
-    // QTableWidget::showGrid() 已提供
+    // QTableWidget::showGrid()
     showGridAction->setChecked(holySheet->showGrid());
     showGridAction->setStatusTip(tr("Show or hide the holySheet's grid"));
-    // QTableWidget::setShowGrid(bool) 已提供
+    // QTableWidget::setShowGrid(bool)
     connect(showGridAction, SIGNAL(toggled(bool)), holySheet, SLOT(setShowGrid(bool)));
 
     autoRecalcAction = new QAction(tr("&Auto Recalculate"), this);
     autoRecalcAction->setCheckable(true);
-    // HolySheet::isAutoRecalc() 自定义
+    // HolySheet::isAutoRecalc()
     autoRecalcAction->setChecked(holySheet->isAutoRecalc());
     autoRecalcAction->setStatusTip(tr("Recalculate the cells automatically"));
-    // HolySheet::setAutoRecalculate(bool) 自定义
+    // HolySheet::setAutoRecalculate(bool)
     connect(autoRecalcAction, SIGNAL(toggled(bool)), holySheet, SLOT(setAutoRecalculate(bool)));
 
     aboutAction = new QAction(tr("A&bout"), this);
@@ -141,7 +141,7 @@ void MainWindow::createActions() {
 
     aboutQtAction = new QAction(tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show the Qt library's About Box"));
-    // qApp 是 全局宏，这里只是调用它的 aboutQt()
+    // qApp: global macro. aboutQt()
     connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
 }
 
@@ -222,10 +222,10 @@ void MainWindow::createStatusBar() {
     statusBar()->addWidget(locationLabel);
     statusBar()->addWidget(formulaLabel, 1);
 
-    // QTableWidget::currentCellChanged() 已提供
+    // QTableWidget::currentCellChanged()
     connect(holySheet, SIGNAL(currentCellChanged(int, int, int, int)),
             this, SLOT(updateStatusBar()));
-    // 自定义 HolySheet::modified()
+    // HolySheet::modified()
     connect(holySheet, SIGNAL(modified()), this, SLOT(sheetModified()));
 }
 
@@ -269,7 +269,6 @@ void MainWindow::open() {
 }
 
 bool MainWindow::loadFile(const QString& fileName) {
-    // TODO: HolySheet::readFile(const QString&)
     if (!holySheet->readFile(fileName)) {
         statusBar()->showMessage(tr("Loading canceled"), 2000);
         return false;

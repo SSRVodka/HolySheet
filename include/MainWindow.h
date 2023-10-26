@@ -1,6 +1,5 @@
 #pragma once
 
-// 最大记录 “最近文件” 数 5 个
 #define MaxRecentFiles 5
 
 #include <QtWidgets/QMainWindow>
