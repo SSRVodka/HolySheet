@@ -3,7 +3,7 @@
 
 <!-- PROJECT SHIELDS -->
 
-[![Contributors][contributors-shield]][contributors-url][![Forks][forks-shield]][forks-url][![Stargazers][stars-shield]][stars-url][![Issues][issues-shield]][issues-url][![MIT License][license-shield]][license-url]
+[![Contributors][contributors-shield]][contributors-url]	[![Forks][forks-shield]][forks-url]	[![Stargazers][stars-shield]][stars-url]	[![Issues][issues-shield]][issues-url]	[![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -30,14 +30,14 @@
 </p>
 
 ## Contents
-- [Quick Start](#Quick Start)
-  - [Installation for Windows](#Installation for Windows)
-  - [Installation for Linux](#Installation for Linux)
+- [Quick Start](#Quick-Start)
+  - [Installation for Windows](#Installation-for-Windows)
+  - [Installation for Linux](#Installation-for-Linux)
 - [Features](#Features)
-- [TODO list (Maybe)](#TODO list (Maybe))
-- [Project Structure](#Project Structure)
-- [Development Framework](#Development Framework)
-- [Version Control](#Version Control)
+- [TODO list (Maybe)](#TODO-list-(Maybe))
+- [Project Structure](#Project-Structure)
+- [Development Framework](#Development-Framework)
+- [Version Control](#Version-Control)
 - [Contributors](#Contributors)
 - [Co-development](#Co-development)
 - [中文 README](#目录)
@@ -211,10 +211,10 @@ Or you can just share some issues / ideas :boom: to help me better Thanks a lot 
 ## 目录
 
 - [快速开始](#快速开始)
-  - [Windows 安装](#Windows 安装)
-  - [Linux 安装](#Linux 安装)
+  - [Windows 安装](#Windows-安装)
+  - [Linux 安装](#Linux-安装)
 - [功能简述](#功能简述)
-- [可能的 TODO list](#可能的 TODO list)
+- [可能的 TODO list](#可能的-TODO-list)
 - [项目目录说明](#项目目录说明)
 - [使用到的框架](#使用到的框架)
 - [版本控制](#版本控制)
